@@ -6,10 +6,11 @@
 ---
 
 ## 🚀 Features
-- 📂 Upload images via web UI
+- 📂 Upload images via web UI with drag & drop support
 - ⚡ Generate multiple AI-driven image variations
 - 🤖 Seamless integration with OpenAI API
 - 🎨 Download individual images or full batch
+- 🌓 Dark/Light theme with automatic persistence
 - 🖥️ Node.js + Express backend for fast API handling
 - 🌐 Clean, responsive frontend
 
@@ -17,10 +18,11 @@
 
 ## 🧑‍💻 Tech Stack
 - **Backend:** Node.js + Express.js  
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla or lightweight framework)  
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla)  
 - **AI Integration:** OpenAI Image Generation API  
 - **File Handling:** Multer (for image uploads)  
 - **Environment Config:** dotenv
+- **Testing:** Jest + Supertest
 
 ---
 
@@ -37,7 +39,7 @@ git clone https://github.com/makalin/InstaNce.git
 cd InstaNce
 ```
 
-2. **Install Backend Dependencies**
+2. **Install Dependencies**
 ```bash
 npm install
 ```
@@ -55,15 +57,27 @@ PORT=3000
 npm start
 ```
 
+For development with auto-reload:
+```bash
+npm run dev
+```
+
+5. **Run Tests**
+```bash
+npm test
+```
+
 Visit `http://localhost:3000` in your browser.
 
 ---
 
 ## ⚡ How It Works
-1. Upload your base image.
-2. The backend sends requests to OpenAI with custom prompts.
-3. Receive AI-generated image instances.
-4. Download or view your sequence.
+1. Upload your base image via drag & drop or file selection
+2. Choose the number of variations to generate
+3. The backend sends requests to OpenAI with custom prompts
+4. Receive AI-generated image instances
+5. Download individual variations or the entire batch
+6. Toggle between dark and light themes as needed
 
 ---
 
@@ -73,6 +87,10 @@ Visit `http://localhost:3000` in your browser.
 - [ ] Add style/theme presets  
 - [ ] User session management  
 - [ ] Deployment on Vercel/Heroku
+- [ ] Image editing tools
+- [ ] Batch processing
+- [ ] API rate limiting
+- [ ] User authentication
 
 ---
 

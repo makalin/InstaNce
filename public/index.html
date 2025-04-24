@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaNce - AI Image Variations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>InstaNce</h1>
+                <p>Generate AI-powered image variations instantly</p>
+            </div>
+            <label class="theme-switch">
+                <input type="checkbox" id="themeToggle" checked>
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-box" id="dropZone">
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                    <div class="upload-content">
+                        <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                        <p>Drag & drop your image here or click to browse</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="variations-control">
+                        <label for="variations">Number of variations:</label>
+                        <input type="number" id="variations" min="1" max="10" value="3">
+                    </div>
+                    <button id="generateBtn" disabled>Generate Variations</button>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Generated Variations</h2>
+                <div class="variations-grid" id="variationsGrid"></div>
+                <button id="downloadAllBtn">Download All</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
